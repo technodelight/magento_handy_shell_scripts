@@ -4,7 +4,7 @@ Description
  
 Direct URL to install:
  
- https://raw.github.com/technodelight/magerun_shell_script_installer/master/magerun-install.sh | bash
+ wget https://raw.github.com/technodelight/magerun_shell_script_installer/master/magerun-install.sh && bash magerun-install.sh
 
 Author
 
