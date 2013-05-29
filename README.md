@@ -4,7 +4,13 @@
  
 ##Direct URL to install:
  
- wget https://raw.github.com/technodelight/magerun_shell_script_installer/master/magerun-install.sh && bash magerun-install.sh
+    wget https://raw.github.com/technodelight/magerun_shell_script_installer/master/magerun-install.sh && bash magerun-install.sh
+
+##Known Issues
+
+ The export command which modifies the path to include `/usr/local/bin` may not run after installing magerun. You can do this manually with running
+ `export PATH=$PATH:/usr/local/bin`
+ from the command line.
 
 ##Author
 
