@@ -9,7 +9,7 @@
 ##Known Issues
 
  The export command which modifies the path to include `/usr/local/bin` may not run after installing magerun. You can do this manually with running
- `export PATH=$PATH:/usr/local/bin`
+ `export PATH=$PATH:/usr/local/bin/`
  from the command line.
 
 ##Author
