@@ -51,7 +51,7 @@
  
  or install magerun directly using this script without downloading the whole handy tools repository:
  
-    curl -sS https://raw.github.com/technodelight/magerun_shell_script_installer/master/magerun-install.sh | bash
+    curl -sS https://raw.github.com/technodelight/magento_handy_shell_scripts/master/magerun-install.sh | bash
 
 
 
