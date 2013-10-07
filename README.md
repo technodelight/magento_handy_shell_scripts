@@ -2,7 +2,7 @@
 
  This is a collection of shell scripts to make a magento developer's life a bit easier.
 
-##increase_admin_session.sh
+##increase-admin-session.sh
 
 ###Description
 
@@ -10,10 +10,10 @@
  
 ###Usage
  
-    ./increase_admin_session.sh
+    ./increase-admin-session.sh
 
 
-##create_db_dump.sh
+##create-db-dump.sh
 
 ###Description
 
@@ -21,25 +21,36 @@
  
 ###Usage
  
-    ./create_db_dump.sh [dbname] [sqlfile]
+    ./create-db-dump.sh [dbname] [sqlfile]
 
- The script defaults the `[dbname]` argument to magentodb while the `[sqlfile]` defaults to `[dbname]-[mdy].sql`. It could be safe to use together with `recreate_db.sh`. This script creates a symlink named `[dbname]-latest.sql`, which points to the last database dump you've made.
+ The script defaults the `[dbname]` argument to magentodb while the `[sqlfile]` defaults to `[dbname]-[mdy].sql`. It could be safe to use together with `recreate-db.sh`. This script creates a symlink named `[dbname]-latest.sql`, which points to the last database dump you've made.
 
 
-##recreate_db.sh
+##recreate-db.sh
 
 ###Description
 
- Shell script to recreate a database from a dump. The script uses the default root username/password combination, like the `create_db_dump.sh`.
+ Shell script to recreate a database from a dump. The script uses the default root username/password combination, like the `create-db-dump.sh`.
  
 ###Usage
  
-    ./recreate_db.sh [sqlfile] [dbname]
+    ./recreate-db.sh [sqlfile] [dbname]
 
- The script defaults the `[dbname]` argument to magentodb while the `[sqlfile]` defaults to `[dbname]-latest.sql`. It could be safely used in combination with `create_db_dump.sh`
+ The script defaults the `[dbname]` argument to magentodb while the `[sqlfile]` defaults to `[dbname]-latest.sql`. It could be safely used in combination with `create-db-dump.sh`
 
 
-##magerun_install.sh
+##restart-services.sh
+
+###Description
+
+ Shell script to restart specified services at once
+ 
+###Usage
+ 
+    ./restart-services.sh [service1] [service2] ... [serviceN]
+
+
+##magerun-install.sh
 
 ###Description
 
@@ -54,6 +65,21 @@
     curl -sS https://raw.github.com/technodelight/magento_handy_shell_scripts/master/magerun-install.sh | bash
 
 
+##bashrc (Custom Bash Profile)
+
+###Description
+
+ Bash profile for to bring your work extra effective
+
+###Usage (installation)
+
+    cat bashrc | sude tee -a [profile path]
+
+ or install directly from git repo
+
+    curl -s https://raw.github.com/technodelight/magento_handy_shell_scripts/master/bashrc | sudo tee -a [profile path]    
+
+ Profile path could be ~/.bashrc or /etc/bashrc for common profile accross accounts (with centOS VM + root account you should give it a try)
 
 #Author
 
