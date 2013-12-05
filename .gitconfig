@@ -1,0 +1,29 @@
+[user]
+	name = <your-name-here>
+	email = <your-email-address-here>
+[core]
+	excludesfile = /Users/galzsolt/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+	grep = auto
+[log]
+	decorate = short
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	checklogs = !git diff HEAD --name-only | xargs grep -n -e "Mage::log" -e "var_dump"
+	exclude = !echo $1 | tee -a .git/info/exclude | echo "Excluding " && echo
+[credential]
+	helper = osxkeychain
