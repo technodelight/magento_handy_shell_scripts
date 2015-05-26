@@ -62,7 +62,7 @@
  
  or install magerun directly using this script without downloading the whole handy tools repository:
  
-    curl -sS https://raw.github.com/technodelight/magento_handy_shell_scripts/master/magerun-install.sh | bash
+    curl https://raw.githubusercontent.com/technodelight/magento_handy_shell_scripts/master/magerun-install.sh --insecure | `which sh`
 
 
 ##bashrc (Custom Bash Profile)
@@ -77,7 +77,7 @@
 
  or install directly from git repo
 
-    curl -s https://raw.github.com/technodelight/magento_handy_shell_scripts/master/bashrc | sudo tee -a [profile path]    
+    curl -s https://raw.githubusercontent.com/technodelight/magento_handy_shell_scripts/master/bashrc | sudo tee -a [profile path]    
 
  Profile path could be ~/.bashrc or /etc/bashrc for common profile accross accounts (with centOS VM + root account you should give it a try)
 
